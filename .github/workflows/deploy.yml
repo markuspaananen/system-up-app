@@ -33,7 +33,7 @@ jobs:
       - name: Build and Push Container
         run: |
           IMAGE_NAME=systemapp-image
-          AR_URL=${{ secrets.REGISTRY_URI }}
+          AR_URL=${{ secrets.REGISTRY_URL }}
           docker build -t "${AR_URL}/${IMAGE_NAME}:${GITHUB_SHA}" .
           docker push "${AR_URL}/${IMAGE_NAME}:${GITHUB_SHA}"
 
