@@ -1,0 +1,6 @@
+version: "3.9"
+
+services:
+  systemapp:
+    build: .
+    container_name: systemapp-java21
